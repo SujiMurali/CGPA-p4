@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CGPA calculator</title>
+    <script>
+        function calculate(){
+            var s1,s2,s3,s4,s5,s6;
+		var x1=document.getElementById("credit_completed_1").value;
+		var x2=document.getElementById("credit_completed_2").value;
+		var x3=document.getElementById("credit_completed_3").value;
+		var x4=document.getElementById("credit_completed_4").value;
+		var x5=document.getElementById("credit_completed_5").value;
+		var x6=document.getElementById("credit_completed_6").value;
+		if(x1=="S")
+        {
+            s1=10.0;
+        }
+        else if(x1=="A" ){
+            s1=9.0;
+        }
+        else if(x1=="B"){
+            s1=8.0;
+        }
+        else if(x1=="C" ){
+            s1=7.0;
+        }
+        else if(x1=="D" ){
+            s1=6.0;
+        }
+        else if(x1=="E"){
+            s1=5.0;
+        }
+        else if(x1=="F" ){
+            s1=0.0
+        }
+        {
+		if(x2=="S")
+		{
+			s2=10.0;
+		}
+		else if(x2=="A")
+		{
+		 s2=9.0;
+		}
+		else if(x2=="B")
+		{
+		 s2=8.0;
+		}
+		else if(x2=="C")
+		{
+		 s2=7.0;
+		}
+		else if(x2=="D")
+		{
+		 s2=6.0;
+		}
+		else if(x2=="E")
+		{
+		 s2=5.0;
+		}
+		else if(x2=="F")
+		{
+		 s2=0;
+		}
+	
+		
+		if(x3=="S")
+		{
+			s3=10.0;
+		}
+		else if(x3=="A")
+		{
+		 s3=9.0;
+		}
+		else if(x3=="B")
+		{
+		 s3=8.0;
+		}
+		else if(x3=="C")
+		{
+		 s3=7.0;
+		}
+		else if(x3=="D")
+		{
+		 s3=6.0;
+		}
+		else if(x3=="E")
+		{
+		 s3=5.0;
+		}
+		else if(x3=="F")
+		{
+		 s3=0;
+		}
+		
+		if(x4=="S")
+		{
+			s4=10.0;
+		}
+		else if(x4=="A")
+		{
+		 s4=9.0;
+		}
+		else if(x4=="B")
+		{
+		 s4=8.0;
+		}
+		else if(x4=="C")
+		{
+		 s4=7.0;
+		}
+		else if(x4=="D")
+		{
+		 s4=6.0;
+		}
+		else if(x4=="E")
+		{
+		 s4=5.0;
+		}
+		else if(x4=="F")
+		{
+		 s4=0;
+		}
+		
+		if(x5=="S")
+		{
+			s5=10.0;
+		}
+		else if(x5=="A")
+		{
+		 s5=9.0;
+		
+		}
+		else if(x5=="B")
+		{
+		 s5=8.0;
+		}
+		else if(x5=="C")
+		{
+		 s1=5;
+		}
+		else if(x5=="D")
+		{
+		 s5=6.0;
+		}
+		else if(x5=="E")
+		{
+		 s5=5.0;
+		}
+		else if(x5=="F")
+		{
+		 s5=0;
+		}
+		
+		if(x6=="S")
+		{
+			s6=10.0;
+		}
+		else if(x6=="A")
+		{
+		 s6=9.0;
+		}
+		else if(x6=="B")
+		{
+		 s6=8.0;
+		}
+		else if(x6=="C")
+		{
+		 s6=7.0;
+		}
+		else if(x6=="D")
+		{
+		 s6=6.0;
+		}
+		else if(x6=="E")
+		{
+		 s6=5.0;
+		}
+		else if(x6=="F")
+		{
+		 s6=0;
+		}
+	}
+		
+		var total=(s1+s2+s3+s4+s5+s6)/6.0;
+		total=parseFloat(total);
+		
+		var g=total.toFixed(2);
+	  window.alert("Your CGPA is : "+g);
+}
+	
+        
+        
+    </script>
+</head>
+<body><br><br>
+    <div class="text-center">
+        <h3>CGPA Calculator</h3>
+    </div>
+   
+    <div class="container">
+        <form action="" class="row">
+        <div class="col-md-3 " >
+           <label for="">Semester No: </label>
+           <input type="text" class="form-control" required="Semester">
+        </div>
+        
+        <div class="col-md-3">
+           <label for="">Subject: </label>
+           <select class="custom-select" id="" required>
+               <option value="">Select the subject</option>
+               <option value="Web Technology">Web Technology</option>
+               <option value="Software Engineering">software Engineering</option>
+               <option value="Computer Networks">Computer Networks</option>
+               <option value="Enterpries Application Using Java">Enterpries Application Using java</option>
+               <option value="Computational Science ">Computational Science </option>
+               <option value="Python Programming">Python Programming</option>
+               <option value="Operating System">Operating System</option>
+               <option value="DataBase Management System">DataBase Management System</option>
+               <option value="Design and Analysis of Algorithm">Design and Analysis of Algorithm</option>
+               <option value="Microprocessor and Emmedded System">Microprocessor and Emmedded System</option>
+           </select>
+        <div class="col-lg-16">
+            <label for="">Subject: </label>
+            <select class="custom-select" id="" required>
+                <option value="">Select the subject</option>
+               <option value="Web Technology">Web Technology</option>
+               <option value="Software Engineering">software Engineering</option>
+               <option value="Computer Networks">Computer Networks</option>
+               <option value="Enterpries Application Using Java">Enterpries Application Using java</option>
+               <option value="Computational Science ">Computational Science </option>
+               <option value="Python Programming">Python Programming</option>
+               <option value="Operating System">Operating System</option>
+               <option value="DataBase Management System">DataBase Management System</option>
+               <option value="Design and Analysis of Algorithm">Design and Analysis of Algorithm</option>
+               <option value="Microprocessor and Emmedded System">Microprocessor and Emmedded System</option>
+            </select>
+        
+            <div class="col-lg-14">
+                <label for="">Subject: </label>
+                <select class="custom-select" id="" required>
+                    <option value="">Select the subject</option>
+               <option value="Web Technology">Web Technology</option>
+               <option value="Software Engineering">software Engineering</option>
+               <option value="Computer Networks">Computer Networks</option>
+               <option value="Enterpries Application Using Java">Enterpries Application Using java</option>
+               <option value="Computational Science ">Computational Science </option>
+               <option value="Python Programming">Python Programming</option>
+               <option value="Operating System">Operating System</option>
+               <option value="DataBase Management System">DataBase Management System</option>
+               <option value="Design and Analysis of Algorithm">Design and Analysis of Algorithm</option>
+               <option value="Microprocessor and Emmedded System">Microprocessor and Emmedded System</option>
+                </select>
+             </div>
+             <div class="col-lg-16">
+                <label for="">Subject: </label>
+                <select class="custom-select" id="" required >
+                    <option value="">Select the subject</option>
+                    <option value="Web Technology">Web Technology</option>
+                    <option value="Software Engineering">software Engineering</option>
+                    <option value="Computer Networks">Computer Networks</option>
+                    <option value="Enterpries Application Using Java">Enterpries Application Using java</option>
+                    <option value="Computational Science ">Computational Science </option>
+                    <option value="Python Programming">Python Programming</option>
+                    <option value="Operating System">Operating System</option>
+                    <option value="DataBase Management System">DataBase Management System</option>
+                    <option value="Design and Analysis of Algorithm">Design and Analysis of Algorithm</option>
+                    <option value="Microprocessor and Emmedded System">Microprocessor and Emmedded System</option>
+                </select>
+             </div>
+             <div class="col-lg-16">
+                <label for="">Subject: </label>
+                <select class="custom-select" id="" required>
+                    <option value="">Select the subject</option>
+               <option value="Web Technology">Web Technology</option>
+               <option value="Software Engineering">software Engineering</option>
+               <option value="Computer Networks">Computer Networks</option>
+               <option value="Enterpries Application Using Java">Enterpries Application Using java</option>
+               <option value="Computational Science ">Computational Science </option>
+               <option value="Python Programming">Python Programming</option>
+               <option value="Operating System">Operating System</option>
+               <option value="DataBase Management System">DataBase Management System</option>
+               <option value="Design and Analysis of Algorithm">Design and Analysis of Algorithm</option>
+               <option value="Microprocessor and Emmedded System">Microprocessor and Emmedded System</option>
+                </select>
+             </div>
+             <div class="col-lg-16">
+                <label for="">Subject: </label>
+                <select class="custom-select" id="" required>
+                    <option value="">Select the subject</option>
+                    <option value="Web Technology">Web Technology</option>
+                    <option value="Software Engineering">software Engineering</option>
+                    <option value="Computer Networks">Computer Networks</option>
+                    <option value="Enterpries Application Using Java">Enterpries Application Using java</option>
+                    <option value="Computational Science ">Computational Science </option>
+                    <option value="Python Programming">Python Programming</option>
+                    <option value="Operating System">Operating System</option>
+                    <option value="DataBase Management System">DataBase Management System</option>
+                    <option value="Design and Analysis of Algorithm">Design and Analysis of Algorithm</option>
+                    <option value="Microprocessor and Emmedded System">Microprocessor and Emmedded System</option>
+                </select>
+             </div>
+         </div>
+
+        </div>
+        <div class="col-md-3">
+            <label for="">Grade: </label>
+            <input type="text" class="form-control" id="credit_completed_1" required>
+            <div class="col-lg-16">
+                <label for="">Grade: </label>
+                <input type="text" class="form-control" id="credit_completed_2" required>
+            </div>
+            <div class="col-lg-16">
+                <label for="">Grade: </label>
+                <input type="text" class="form-control" id="credit_completed_3" required>
+            </div>
+            <div class="col-lg-16">
+                <label for="">Grade: </label>
+                <input type="text" class="form-control" id="credit_completed_4" required>
+            </div>
+            <div class="col-lg-16">
+                <label for="">Grade: </label>
+                <input type="text" class="form-control" id="credit_completed_5" required>
+            </div>
+            <div class="col-lg-16">
+                <label for="">Grade: </label>
+                <input type="text" class="form-control" id="credit_completed_6" required>
+            </div>
+        </div>  
+    </div>
+        <br>
+        <div class="container text-center">
+            <input type="reset" class="btn btn-primary" value="Reset">
+            <button type="submit" onClick="calculate()" id="calculate_btn" class="btn btn-primary ">Calculate
+                CGPA</button>
+            </div>
+      </form>
+    </div>
+</body>
+</html>
